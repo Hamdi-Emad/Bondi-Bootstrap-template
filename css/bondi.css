@@ -1,0 +1,244 @@
+/* Start Variables */
+:root {
+   --dark-color: #19283f;
+   --main-color: #33dacc;
+   --second-color: #ff3150;
+   --third-color: #ffc400;
+   --white-color: #ffffff;
+   --section-color: #eff7fa;
+}
+/* End Variables */
+/* Start Global Rules */
+body {
+   font-family: "Roboto", sans-serif;
+   scroll-behavior: smooth;
+}
+/* End Global Rules */
+/* Start Components */
+.main-button {
+   padding: 0.5rem 1rem;
+   background-color: var(--second-color);
+   text-decoration: none;
+   color: var(--third-color);
+   font-weight: 500;
+   transition: 0.3s;
+}
+.main-button:hover {
+   color: var(--white-color);
+   background-color: var(--main-color);
+}
+/* --- */
+.main-title {
+   font-weight: 500;
+}
+.main-title::after {
+   content: "";
+   position: absolute;
+   width: 120px;
+   height: 2px;
+   background-color: var(--main-color);
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: -20px;
+}
+/* End Components */
+/* Start Navbar */
+.navbar {
+   background-color: var(--dark-color);
+   top: -2px;
+}
+.navbar .navbar-nav .nav-link {
+   color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+   color: var(--main-color);
+}
+.navbar .search {
+   border-left: 1px solid var(--main-color);
+}
+.navbar .search svg {
+   color: var(--main-color);
+   font-size: 17px;
+}
+.navbar .navbar-toggler {
+   color: white;
+   font-size: 27px;
+   border: none;
+}
+.navbar .navbar-toggler:focus {
+   box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+   border: 2px solid var(--main-color);
+}
+/* End Navbar */
+/* Start Landing */
+.landing {
+   background-color: var(--dark-color);
+   height: calc(100vh - 72px);
+}
+@media (max-width: 991px) {
+   .landing {
+      height: calc(100vh - 70px);
+   }
+}
+.landing > div h1 {
+   font-weight: 500;
+}
+.landing > div p {
+   font-weight: 500;
+}
+/* End Landing */
+/* Start Features */
+.features .icon-holder {
+   height: 200px;
+}
+.features .icon-holder svg {
+   left: 50%;
+   transform: translateX(-50%);
+}
+.features .icon-holder .number {
+   height: 100%;
+   color: var(--section-color);
+}
+.features .icon-holder .icon {
+   height: 33%;
+   color: var(--main-color);
+}
+.features .feat h4 {
+   color: var(--third-color);
+}
+.features .feat p {
+   font-weight: 500;
+}
+/* End Features */
+/* Start Our Work */
+.our-work {
+   background-color: var(--section-color);
+}
+.our-work .shuffle li button {
+   background-color: transparent;
+   color: #212529;
+   font-weight: 500;
+}
+.our-work .shuffle li button:hover {
+   color: var(--second-color);
+}
+.our-work .shuffle li button.active,
+.our-work .shuffle li button:focus {
+   background-color: var(--second-color);
+   color: var(--third-color);
+}
+.our-work .tab-content > div {
+   transition: 0.13s linear;
+}
+.our-work .tab-content .padding-around {
+   padding: 5px;
+   background-color: white;
+   overflow: hidden;
+   position: relative;
+}
+.our-work .tab-content .padding-around::before {
+   content: attr(data-work);
+   position: absolute;
+   background-color: #33d1ccc2;
+   width: calc(100% - 10px);
+   height: calc(100% - 10px);
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 600;
+   font-size: 25px;
+   transition: 0.3s;
+   left: -100%;
+}
+.our-work .tab-content > div > div > div:hover .padding-around::before {
+   left: calc(0% + 5px);
+}
+
+/* End Our Work */
+/* Start Stuff  */
+.stuff .description {
+   max-width: 500px;
+   font-weight: 500;
+}
+.stuff .row p {
+   font-weight: 500;
+}
+/* End Stuff */
+/* Start Team */
+.team {
+   background-color: var(--section-color);
+}
+.team h2 {
+   color: var(--third-color);
+}
+.team h4 {
+   color: var(--white-color);
+   background-color: var(--main-color);
+}
+/* End Team */
+/* Start Projects */
+.projects {
+   background-color: var(--dark-color);
+}
+/* End Projects */
+/* Start Subscribe */
+.subscribe {
+   background-color: var(--third-color);
+}
+.subscribe input[type="email"] {
+   border: none;
+   border-bottom: 1px solid var(--white-color);
+   caret-color: var(--white-color);
+}
+.subscribe input[type="email"]:focus {
+   outline: none;
+}
+.subscribe input[type="email"]::placeholder {
+   color: var(--white-color);
+}
+.subscribe input[type="submit"]{
+   background-color: var(--dark-color);
+   color: #ffc400;
+   width: fit-content
+}
+.subscribe input[type="submit"]:focus,
+.subscribe input[type="submit"]:hover{
+   background-color: var(--dark-color);
+   color: #ffc400;
+}
+/* End Subscribd */
+/* Start Footer */
+.footer {
+   background-color: var(--dark-color);
+}
+.footer .copyright > span {
+   color: var(--main-color);
+}
+.footer .copyright div span {
+   color: var(--third-color);
+}
+.footer .contact-us ul {
+   width: fit-content;
+}
+.footer .contact-us ul svg {
+   width: 20px;
+   height: 20px;
+}
+.footer .contact-us ul .facebook{
+   background-color: #1877f2;
+}
+.footer .contact-us ul .twitter{
+   background-color: #1da1f2;
+}
+.footer .contact-us ul .linkedin{
+   background-color: #0a66c2;
+}
+.footer .contact-us ul .youtube{
+   background-color: #ff0000;
+}
+/* End Footer */
